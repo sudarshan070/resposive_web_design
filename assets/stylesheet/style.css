@@ -144,7 +144,6 @@ table {
 
 body {
   line-height: 1.5;
-  font-size: 0;
   font-family: "Source Sans Pro", sans-serif;
 }
 .container {
@@ -178,9 +177,8 @@ h4 {
   padding: 16px 0;
   vertical-align: middle;
 }
-.logo a {
-  font-size: 24px;
-  color: #55ba68;
+.logo {
+  width: 120px;
 }
 
 .header-menu li {
@@ -194,6 +192,9 @@ h4 {
 }
 .header-menu li a:hover {
   color: #55ba68;
+}
+.sub-menu {
+  display: block;
 }
 
 /***********************************/
@@ -276,6 +277,7 @@ img {
   border-bottom: 1px solid #213667;
   margin-bottom: 30px;
   padding-bottom: 6px;
+  outline: 0;
 }
 .flex-contact {
   flex-wrap: wrap;
@@ -292,6 +294,15 @@ img {
   width: 70%;
   margin: 0 auto;
 }
+.btn-send {
+  background: #2b4c57;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* .contact button {
+  text-align: left;
+} */
 /***********************************/
 /* map section */
 /***********************************/
@@ -370,8 +381,7 @@ tr:nth-child(even) {
   color: #ffffff;
   font-size: 20;
 }
-.fab,
-.fas {
+.icon {
   color: #ffffff;
   font-size: 24px;
   margin-left: 14px;
@@ -394,12 +404,19 @@ tr:nth-child(even) {
 /* media */
 /***********************************/
 @media all and (max-width: 760px) {
-  .logo a {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .logo {
+    padding-left: 24px;
     text-align: center;
-    width: 100%;
+    width: 80%;
   }
   .header-menu li {
-    display: block;
+    margin-top: 12px;
+    text-align: center;
+    display: inline-block;
   }
   .hero h2 {
     font-size: 32px;
@@ -413,15 +430,44 @@ tr:nth-child(even) {
     margin-top: 32px;
   }
   .about-col {
+    margin-top: 12px;
     width: 100%;
     display: block;
   }
   .col-3 {
+    margin-top: 24px;
     width: 100%;
     display: block;
   }
   .form,
   .alt-map {
+    width: 100%;
+  }
+  table {
     width: 90%;
+  }
+  h4 {
+    font-size: 24px;
+  }
+
+  .col-3 li {
+    padding-top: 0;
+  }
+  .col-3 p {
+    font-size: 16px;
+  }
+  .col-3 h3,
+  .fab,
+  .fas {
+    font-size: 20px;
+  }
+  .padding {
+    padding: 40px 0;
+  }
+  .hero h3 {
+    font-size: 18px;
+  }
+  .social {
+    text-align: center;
   }
 }
