@@ -184,7 +184,10 @@ h4 {
 .header-menu li {
   display: inline-block;
 }
-.header-menu li a {
+.header-menu {
+  position: relative;
+}
+.header-menu a {
   color: #ffffff;
   font-size: 16px;
   text-transform: uppercase;
@@ -193,10 +196,35 @@ h4 {
 .header-menu li a:hover {
   color: #55ba68;
 }
-.sub-menu {
+.sub-menu li {
   display: block;
 }
+.sub-menu {
+  background: #ffffff;
+  padding: 12px 32px;
+  text-align: center;
+  border-radius: 3px;
+}
+.sub-menu a {
+  color: #11151c;
+  line-height: 2;
+}
+.sub-menu-box {
+  display: none;
+  position: absolute;
+  /* left: 50%; */
+  padding-top: 40px;
+  top: 0;
+  transform: translateX(-50%);
+}
+.nav-sub-menu:hover .sub-menu-box {
+  display: inline-block;
+}
 
+#toggle,
+.hamburger {
+  display: none;
+}
 /***********************************/
 /* hero section */
 /***********************************/
@@ -412,6 +440,7 @@ tr:nth-child(even) {
     padding-left: 24px;
     text-align: center;
     width: 80%;
+    position: relative;
   }
   .header-menu li {
     margin-top: 12px;
@@ -469,5 +498,43 @@ tr:nth-child(even) {
   }
   .social {
     text-align: center;
+  }
+  .header-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(1, 26, 41, 0.9);
+    text-align: center;
+    padding-top: 130px;
+  }
+
+  .hamburger {
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+  }
+  #toggle:checked ~ .header-menu {
+    display: block;
+  }
+  .sub-menu-box {
+    display: block;
+    padding-top: 0;
+  }
+  .sub-menu {
+    background: none;
+    padding: 0;
+  }
+  .sub-menu a {
+    color: #ffffff;
+  }
+  .down-icon {
+    display: none;
   }
 }
