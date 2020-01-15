@@ -212,10 +212,10 @@ h4 {
 .sub-menu-box {
   display: none;
   position: absolute;
-  /* left: 50%; */
+  left: 50;
   padding-top: 40px;
   top: 0;
-  transform: translateX(-50%);
+  transform: translateX(-70%);
 }
 .nav-sub-menu:hover .sub-menu-box {
   display: inline-block;
@@ -306,6 +306,7 @@ img {
   margin-bottom: 30px;
   padding-bottom: 6px;
   outline: 0;
+  resize: none;
 }
 .flex-contact {
   flex-wrap: wrap;
@@ -437,15 +438,10 @@ tr:nth-child(even) {
     margin: 0 auto;
   }
   .logo {
-    padding-left: 24px;
+    padding-left: 50px;
     text-align: center;
-    width: 80%;
+    width: 40%;
     position: relative;
-  }
-  .header-menu li {
-    margin-top: 12px;
-    text-align: center;
-    display: inline-block;
   }
   .hero h2 {
     font-size: 32px;
@@ -509,7 +505,6 @@ tr:nth-child(even) {
     right: 0;
     background: rgba(1, 26, 41, 0.9);
     text-align: center;
-    padding-top: 130px;
   }
 
   .hamburger {
@@ -525,7 +520,9 @@ tr:nth-child(even) {
   }
   .sub-menu-box {
     display: block;
-    padding-top: 0;
+    padding: 0;
+    transform: none;
+    position: relative;
   }
   .sub-menu {
     background: none;
@@ -536,5 +533,8 @@ tr:nth-child(even) {
   }
   .down-icon {
     display: none;
+  }
+  .header-menu li {
+    display: block;
   }
 }
